@@ -9,8 +9,6 @@ export const personalInfo = {
     cvUrl: "/cv.pdf",
 };
 
-// Map tech names to DevIcon CSS class names.
-// Add new entries here when you add new techs to techStack — no component changes needed.
 export const devIconMap: Record<string, string> = {
     "HTML5": "devicon-html5-plain colored",
     "CSS3": "devicon-css3-plain colored",
@@ -72,6 +70,25 @@ export const techStack = {
 export const projects = [
     {
         id: 1,
+        title: "Library Task Manager",
+        description:
+            "A full-stack library management system with secure JWT auth, Stripe-powered borrowing payments, automated return task tracking, and an admin dashboard for books and stats.",
+        techStack: ["React", "TypeScript", "Express.js", "MongoDB", "Mongoose", "Redux Toolkit", "Tailwind CSS", "Stripe"],
+        githubUrl: "https://github.com/Sudip-gt/LibraryTaskManager",
+        liveUrl: "https://library-task-manager.vercel.app/",
+        category: "fullstack",
+    },
+    {
+        "id": 2,
+        "title": "CLI Note Manager",
+        "description": "A lightweight command-line note management tool built with Node.js. Features include adding notes with unique IDs and timestamps, paginated listing for performance, and an event loop demonstration. Stores data in JSON for simplicity and portability.",
+        "techStack": ["Node.js", "JavaScript", "fs", "crypto", "path"],
+        "githubUrl": "https://github.com/Sudip-gt/day22_noteManager",
+        "liveUrl": null,
+        "category": "cli"
+    },
+    {
+        id: 3,
         title: "Developer Portfolio",
         description:
             "A modern, responsive portfolio website built with Next.js App Router and Tailwind CSS. Features smooth animations, dark theme, SEO optimization, and a contact form.",
@@ -81,7 +98,7 @@ export const projects = [
         category: "fullstack",
     },
     {
-        id: 2,
+        id: 4,
         title: "Drag & Drop TODO App",
         description:
             "A feature-rich TODO application with drag-and-drop task reordering, priority labels, and persistent storage via localStorage. Clean UI with smooth interactions.",
@@ -91,7 +108,7 @@ export const projects = [
         category: "frontend",
     },
     {
-        id: 3,
+        id: 6,
         title: "Profile Management System",
         description:
             "A full-stack profile management system with user authentication, profile photo upload via Cloudinary, and CRUD operations. Built with a NestJS backend and React frontend.",
@@ -153,7 +170,7 @@ export const experience = [
             "Explored NestJS for scalable backend architecture",
             "Practiced Docker containerization and deployment workflows",
         ],
-    },
+    }
 ];
 
 export const navLinks = [
