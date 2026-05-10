@@ -2,6 +2,10 @@
 
 import { navLinks, personalInfo } from "@/data/portfolio";
 
+interface FooterProps {
+  year: number;
+}
+
 function GithubIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -18,9 +22,7 @@ function LinkedinIcon() {
   );
 }
 
-export default function Footer() {
-  const year = new Date().getFullYear();
-
+export default function Footer({ year }: FooterProps) {
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };

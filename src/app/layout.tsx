@@ -72,6 +72,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <html
       lang="en"
@@ -83,11 +85,11 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
           <Navbar />
           <CommandPaletteProvider />
           <main className="flex-1" data-search-root>{children}</main>
-          <Footer />
+          <Footer year={currentYear} />
         </body>
     </html>
   );
