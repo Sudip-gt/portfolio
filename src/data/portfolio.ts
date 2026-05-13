@@ -179,5 +179,82 @@ export const navLinks = [
     { label: "Tech Stack", href: "#techstack" },
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
+    { label: "Docs", href: "#documentation" },
     { label: "Contact", href: "#contact" },
 ];
+
+export const documentation = [
+    {
+        id: "overview",
+        title: "Project Overview",
+        summary:
+            "A statically-rendered, single-page portfolio built with the Next.js 16 App Router. All copy lives in one typed data module so the site can be updated without touching components.",
+        bullets: [
+            "Next.js 16 App Router with React 19 server + client components",
+            "Tailwind CSS v4 with CSS variables driving the dark theme",
+            "Framer Motion for entrance animations and the projects modal",
+            "Single source of truth in src/data/portfolio.ts",
+        ],
+    },
+    {
+        id: "architecture",
+        title: "Architecture",
+        summary:
+            "The home page composes section components in a fixed order. A floating navbar, footer, and command palette wrap every page through the root layout.",
+        bullets: [
+            "src/app/layout.tsx — global metadata, fonts, Navbar, Footer, CommandPaletteProvider",
+            "src/app/page.tsx — composes Hero → About → TechStack → Projects → Experience → Docs → Contact",
+            "src/components/sections/* — one file per landing-page section",
+            "src/app/api/contact/route.ts — server route that validates with Zod and sends mail via Resend",
+        ],
+    },
+    {
+        id: "customize",
+        title: "Customizing Content",
+        summary:
+            "Almost everything on the page — name, bio, projects, experience, navigation links — is sourced from src/data/portfolio.ts. Edit that file, save, and the UI reflects it instantly.",
+        bullets: [
+            "personalInfo — name, title, tagline, bio, social URLs, CV link",
+            "techStack — grouped frontend / backend / database / tools entries",
+            "projects — id, title, description, techStack, githubUrl, liveUrl, category",
+            "experience — chronological work and learning history with highlights",
+        ],
+    },
+    {
+        id: "contact",
+        title: "Contact Form & Email",
+        summary:
+            "The contact form is React Hook Form + Zod on the client, submitted to /api/contact, which validates again and dispatches a styled email through Resend.",
+        bullets: [
+            "Schema lives in src/lib/contactSchema.ts — shared between client and server",
+            "Hook in src/hooks/useContactForm.ts wraps submit + toast feedback",
+            "Set RESEND_API_KEY, PERSONAL_EMAIL, PERSONAL_NAME in .env.local",
+            "Swap the from address once you verify a custom domain in Resend",
+        ],
+    },
+    {
+        id: "tooling",
+        title: "Tooling & Scripts",
+        summary:
+            "Node version is pinned with mise so contributors get a reproducible environment. npm scripts cover the day-to-day workflow.",
+        bullets: [
+            "mise install — installs the Node version pinned in mise.toml",
+            "npm run dev — start the local dev server on http://localhost:3000",
+            "npm run lint — run ESLint with the Next.js config",
+            "npm run build && npm start — produce and serve a production build",
+        ],
+    },
+    {
+        id: "deploy",
+        title: "Deployment",
+        summary:
+            "The site is a standard Next.js app and deploys cleanly to Vercel. Any platform that supports Node 20+ and Next.js 16 will also work.",
+        bullets: [
+            "Push to GitHub and import the repo into Vercel",
+            "Add RESEND_API_KEY, PERSONAL_EMAIL, PERSONAL_NAME as environment variables",
+            "Set the production domain so Open Graph / canonical URLs resolve correctly",
+            "Update metadataBase in src/app/layout.tsx to your real domain",
+        ],
+    },
+];
+

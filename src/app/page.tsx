@@ -1,5 +1,6 @@
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
+import Documentation from "@/components/sections/Documentation";
 import Experience from "@/components/sections/Experience";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
@@ -13,6 +14,7 @@ export default function Home() {
       <TechStack />
       <Projects />
       <Experience />
+      <Documentation />
       <Contact />
     </div>
   );
