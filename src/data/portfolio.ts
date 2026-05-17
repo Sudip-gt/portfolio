@@ -75,7 +75,7 @@ export const projects = [
             "A full-stack library management system with secure JWT auth, Stripe-powered borrowing payments, automated return task tracking, and an admin dashboard for books and stats.",
         techStack: ["React", "TypeScript", "Express.js", "MongoDB", "Mongoose", "Redux Toolkit", "Tailwind CSS", "Stripe"],
         githubUrl: "https://github.com/Sudip-gt/LibraryTaskManager",
-        liveUrl: "https://library-task-manager.vercel.app/",
+        liveUrl: "https://library-task-manager-jbijqjq0x-sudip-gts-projects.vercel.app/",
         category: "fullstack",
     },
     {
@@ -89,11 +89,11 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Developer Portfolio",
+        title: "Ecommerce Platform",
         description:
-            "A modern, responsive portfolio website built with Next.js App Router and Tailwind CSS. Features smooth animations, dark theme, SEO optimization, and a contact form.",
+            "Headless e‑commerce platform combining a Next.js (App Router) storefront with a modular Medusa backend. Built in TypeScript with Cloudinary media support, reusable UI components, seedable migration scripts, and custom API/admin routes. Docker-ready monorepo structure, SSR/SEO-friendly pages, and production-ready deployment configs.",
         techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        githubUrl: "https://github.com/yourusername/portfolio",
+        githubUrl: "https://github.com/Sudip-gt/ecommerce-platform.git",
         liveUrl: "https://yourportfolio.vercel.app",
         category: "fullstack",
     },
@@ -103,8 +103,8 @@ export const projects = [
         description:
             "A feature-rich TODO application with drag-and-drop task reordering, priority labels, and persistent storage via localStorage. Clean UI with smooth interactions.",
         techStack: ["React", "TypeScript", "Tailwind CSS", "localStorage"],
-        githubUrl: "https://github.com/yourusername/todo-app",
-        liveUrl: "https://todo-app-demo.vercel.app",
+        githubUrl: "https://github.com/Sudip-gt/todo-app",
+        liveUrl: null,
         category: "frontend",
     },
     {
@@ -113,7 +113,7 @@ export const projects = [
         description:
             "A full-stack messaging system with real-time communication capabilities, user authentication, and scalable architecture. Built with a NestJS backend and React frontend.",
         techStack: ["React", "NestJS", "MongoDB", "Cloudinary", "JWT"],
-        githubUrl: "https://github.com/yourusername/nats-messaging-system",
+        githubUrl: "https://github.com/Sudip-gt/nest_boilarplate.git",
         liveUrl: null,
         category: "fullstack",
     },
@@ -148,7 +148,7 @@ export const experience = [
         id: 3,
         role: "STEAM Officer",
         organization: "Community Organization",
-        period: "2022 – Present",
+        period: "2022 – 2024",
         description:
             "Facilitated STEAM (Science, Technology, Engineering, Art, Mathematics) programs and workshops for students. Mentored young learners in technology and programming fundamentals.",
         highlights: [
